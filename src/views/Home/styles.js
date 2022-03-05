@@ -83,11 +83,3 @@ margin-right: 114px;
 width:1130px;
 
 `
-export const BookBlock = styled.div`
-background: #FFFFFF;
-box-shadow: 0px 16px 80px rgba(84, 16, 95, 0.32);
-border-radius: 4px;
-cursor: pointer;
-height: 160px;
-width: 272px;
-`
