@@ -1,110 +1,93 @@
 import { createGlobalStyle } from "styled-components";
 import styled from "styled-components/macro";
+import img2 from '../../assets/images/In/1Background.svg';
+import img4 from '../../assets/images/In/2Background.svg';
 
-export const HomeStyle = createGlobalStyle`
+export const Background = createGlobalStyle`
 *{
   font-family: 'Heebo', sans-serif;
-  font-weight: 300;
-  font-size: 28px;
-  color: #fff;
+}
+body{
+  background: url(${img2}), url(${img4});
+  background-blend-mode: darken;
+  transform: matrix(1, 0, 0, -1, 0, 0), transform: rotate(-180deg);
 }
 `
-export const Container = styled.main`
-display: flex;
-flex-direction: column;
-justify-content: center;
-height: 100vh;
-padding-left: 115px;
-h1{
-  cursor: default;
-}
-`
-export const ContainerTitle = styled.div`
+export const HeaderContainer = styled.div`
 align-items: center;
-display: flex;
-flex-direction: row;
-margin-bottom: 48px;
-`
-export const Logo = styled.img`
-width: 104.4px;
-height: 36px;
-padding-right: 16.6px;
-`
-export const ContainerInput = styled.div`
-position: relative;
-`
-export const Label = styled.label`
-color: #FFFFFF;
-font-size: 12px;
-opacity: 0.5;
-margin-left: 16px;
-margin-top: 8px;
-position: absolute;
-z-index:1;
-`
-export const Input = styled.input`
-background: rgba(0, 0, 0, 0.32);
-backdrop-filter: blur(2px);
-border: none;
-border-radius: 4px;
 box-sizing: border-box;
-font-size: 16px;
-font-weight: 400;
-height: 60px;
-margin-bottom: 16px;
-outline: none;
-padding-bottom: 8px;
-padding-left: 16px;
-padding-top: 28px;
-position: relative;
-width: 368px;
-z-index: 0;
-
-
-
-
-
+display: flex;
+justify-content: space-between;
+margin: 0 auto;
+margin-top: 40px;
+margin-left: 115px;
+margin-right: 120px;
+width: 1130px;
 `
-export const Button = styled.button`
-background: #FFFFFF;
-border-radius: 44px;
-color: #B22E6F;
-cursor: pointer;
-font-size: 16px;
-height: 36px;
-font-weight: 500;
-width: 85px;
-border: 0;
-outline: none;
-left: 270px;
-top: 11px;
-position: absolute;
+export const TextContainer = styled.div`
+display: flex;
 `
-export const PopUp = styled.div`
+export const Title = styled.h1`
+color: #333;
+cursor: default;
+font-weight: 300;
+font-size: 28px;
+line-height: 40px;
+margin-left: 16px;
+`
+export const SignOut = styled.div`
+display: flex;
 align-items: center;
-background: rgba(255, 255, 255, 0.4);
-backdrop-filter: blur(2px);
-border-radius: 4px;
-display:flex;
-font-size: 16px;
-font-weight: 700;
-height: 48px;
-margin-top: 8px;
+`
+export const IconContainer = styled.div`
+align-items: center;
+border-radius: 50%;
+border: 1px solid rgba(51, 51, 51, 0.2);
+box-sizing: border-box;
+cursor: pointer;
+display: flex;
+height: 32px;
 justify-content: center;
-position: absolute;
-width: 239px;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+width: 32px;
+`
+export const TextIconContainer = styled.div`
+color: #333;
+font-size: 12px;
+font-weight: 400;
+line-height: 16px;
+margin-right: 16px;
 
-&:after {
-    content: "";
-    position: absolute;
-    top: -6.9px;
-    left: 12px;
-    border-style: solid;
-    border-width: 0 4px 6.9px 4px;
-    border-color: transparent transparent rgba(255, 255, 255, 0.4); transparent;
-
+span{
+  font-weight: 500;
 }
-
+`
+export const Arrow = styled.img`
+height: 8px;
+width: 10.5px;
+transform: rotate(180deg);
+`
+export const Shape = styled.img`
+height: 14px;
+width: 5.5px;
+transform: rotate(180deg);
+`
+export const BodyContainer = styled.div`
+display: flex;
+flex-wrap: wrap;
+height: 512px;
+justify-content: space-between;
+margin-top: 40px;
+margin-left: 115px;
+margin-right: 114px;
+width:1130px;
 
 `
-
+export const BookBlock = styled.div`
+background: #FFFFFF;
+box-shadow: 0px 16px 80px rgba(84, 16, 95, 0.32);
+border-radius: 4px;
+cursor: pointer;
+height: 160px;
+width: 272px;
+`

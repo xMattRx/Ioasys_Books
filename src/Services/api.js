@@ -4,7 +4,7 @@ const api = axios.create({
   baseURL: "https://books.ioasys.com.br/api/v1",
 });
 
-export const Login = async (email, password) =>{
+export const AccessingHome = async (email, password) =>{
   try{
   const result = await api.post('/auth/sign-in',{email: email, password: password})
   
@@ -18,8 +18,8 @@ export const Token = async (authorization) => {
   try{
     // console.log("authorization: " + authorization)
     const token = await api.post('/auth/refresh-token', {"refreshToken": authorization});
-    // console.log(token)
-    
+    return token.status
+
   }catch(error){
     console.log(error);
   }
