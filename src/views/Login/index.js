@@ -38,7 +38,7 @@ export default function Login() {
     <LoginStyle/>
      <Container>
       <ContainerTitle>
-         <Logo src={LogoImg}/>
+         <Logo src={LogoImg} alt="Logo"/>
          <h1>Books</h1>
       </ContainerTitle>
 

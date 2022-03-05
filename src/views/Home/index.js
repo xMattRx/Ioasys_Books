@@ -20,8 +20,6 @@ export default function Home() {
   useEffect(()=>{
     setName(getName())
     catchBooks()
-    
-    
   },[])
 
   
@@ -31,7 +29,7 @@ export default function Home() {
      <header>
        <HeaderContainer>
           <TextContainer>
-          <img src={Logo}/> 
+          <img src={Logo} alt="ioasys"/> 
           <Title>Books</Title>
           </TextContainer>
           <SignOut>
@@ -48,12 +46,15 @@ export default function Home() {
      <main>
       <BodyContainer>
       {books.length > 0 && books.map((book,index) => {
-          return <Book key={index} image={book.imageUrl} title={book.title} authors={book.authors} pages={book.pageCount}
+          return <Book key={index} id={book.id} image={book.imageUrl} title={book.title} authors={book.authors} pages={book.pageCount}
           publishing={book.publisher} year={book.published}
           />
       })}
       </BodyContainer>
-      </main>     
+     </main>
+     <div>
+       
+     </div>     
    
 
     </>

@@ -9,6 +9,10 @@ cursor: pointer;
 display: flex;
 height: 160px;
 width: 272px;
+transition: all 0.6s;
+&:hover{
+  transform: scale(1.01);
+}
 `
 export const BookBlockContainer = styled.div`
   display: flex;
@@ -30,24 +34,33 @@ export const BookTitle = styled.h2`
 color: #333;
 font-size: 14px;
 font-weight: 500;
-`
+white-space: nowrap; 
+width: 154px; 
+overflow: hidden;
+text-overflow: ellipsis; 
 
+`
+export const BookAuthorContainer = styled.div`
+display: flex;
+flex-direction: column;
+`
 export const BookAuthor = styled.p`
 font-family: Heebo;
 font-weight: 400;
 font-size: 12px;
 color: #AB2680;
 `
-
-
 export const InformationContainer = styled.div`
 margin-top: 18px;
 margin-bottom: 19px;
 `
-
 export const Information = styled.p`
 font-family: Heebo;
 font-size: 12px;
 line-height:20px;
 color: #999999;
+white-space: nowrap; 
+width: 154px; 
+overflow: hidden;
+text-overflow: ellipsis; 
 `
