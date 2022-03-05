@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LogoImg from '../../assets/images/Logo.svg';
-import { Login } from '../../Services/api';
+import { Login, Token } from '../../Services/api';
 import { Button, Container, ContainerInput, ContainerTitle, HomeStyle, Input, Label, Logo, PopUp } from './styles';
 
 
@@ -10,24 +10,18 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  
-//  const Submit = async () =>{
-//    try{
-//    const result = await api.post('/auth/sign-in',{email: email, password: password})
-//    if(result.status === 200){
-//      setError(false)
-//    }
-//   }catch(error){
-//     setError(true)
-//     console.log(error);
-//   }
-//  }
 async function Submit(){
- let status = await Login(email,password)
- if(status === undefined){
+ let data = await Login(email,password)
+ console.log(data)
+ if(data === undefined){
    setError(true);
  }else{
-   setError(false);
+  const informations = data.data;
+  const refresh = data.headers["refresh-token"];
+  // console.log("informations: " + informations)
+  // console.log("refresh: " + refresh)
+  setError(false);
+  Token(refresh);
  }
 }
 
