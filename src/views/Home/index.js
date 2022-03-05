@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LogoImg from '../../assets/images/Logo.svg';
 import { Button, Container, ContainerInput, ContainerTitle, HomeStyle, Input, Label, Logo, PopUp } from './styles';
 
+
 export default function Home() {
+
+  const [error, setError] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+
+  const Submit = () => {
+    console.log(email)
+  }
+  
+//  const Submit = async (email, password) =>{
+//    let result = await Login(email,password)
+//    console.log(result);
+//  }
+
   return (
     <>
     <HomeStyle/>
@@ -13,15 +29,15 @@ export default function Home() {
       </ContainerTitle>
 
       <ContainerInput>
-        <Label for="email">Email</Label>
-        <Input id="email" type="email"/>
+        <Label htmlFor="email">Email</Label>
+        <Input id="email" onChange={(e) => setEmail(e.target.value)}value={email} type="email"/>
       </ContainerInput>
       
       <ContainerInput>
-        <Label for="password">Senha</Label>
-        <Input id="password" type="password"/>
-        <Button>Entrar</Button>
-        <PopUp>Email e/ou senha incorretos.</PopUp>
+        <Label htmlFor="password">Senha</Label>
+        <Input id="password" onChange={(e) => setPassword(e.target.value)} value={password} type="password"/>
+        <Button onClick={Submit}>Entrar</Button>
+        {error && <PopUp>Email e/ou senha incorretos.</PopUp>}
       </ContainerInput>
     </Container>
     </>
