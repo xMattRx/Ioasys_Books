@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LogoImg from '../../assets/images/Logo.svg';
+import { Login } from '../../Services/api';
 import { Button, Container, ContainerInput, ContainerTitle, HomeStyle, Input, Label, Logo, PopUp } from './styles';
 
 
@@ -9,15 +10,22 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-
-  const Submit = () => {
-    console.log(email)
-  }
   
-//  const Submit = async (email, password) =>{
-//    let result = await Login(email,password)
-//    console.log(result);
+//  const Submit = async () =>{
+//    try{
+//    const result = await api.post('/auth/sign-in',{email: email, password: password})
+//    if(result.status === 200){
+//      setError(false)
+//    }
+//   }catch(error){
+//     setError(true)
+//     console.log(error);
+//   }
 //  }
+async function Submit(){
+ let status = await Login(email,password)
+ console.log(status)
+}
 
   return (
     <>
