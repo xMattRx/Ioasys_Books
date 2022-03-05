@@ -24,7 +24,11 @@ export default function Home() {
 //  }
 async function Submit(){
  let status = await Login(email,password)
- console.log(status)
+ if(status === undefined){
+   setError(true);
+ }else{
+   setError(false);
+ }
 }
 
   return (
