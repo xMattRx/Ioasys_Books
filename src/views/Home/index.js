@@ -1,6 +1,6 @@
 import React from 'react';
 import LogoImg from '../../assets/images/Logo.svg';
-import { Button, Container, ContainerInput, ContainerTitle, HomeStyle, Input, Label, Logo } from './styles';
+import { Button, Container, ContainerInput, ContainerTitle, HomeStyle, Input, Label, Logo, PopUp } from './styles';
 
 export default function Home() {
   return (
@@ -21,6 +21,7 @@ export default function Home() {
         <Label for="password">Senha</Label>
         <Input id="password" type="password"/>
         <Button>Entrar</Button>
+        <PopUp>Email e/ou senha incorretos.</PopUp>
       </ContainerInput>
     </Container>
     </>

@@ -80,4 +80,31 @@ left: 270px;
 top: 11px;
 position: absolute;
 `
+export const PopUp = styled.div`
+align-items: center;
+background: rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(2px);
+border-radius: 4px;
+display:flex;
+font-size: 16px;
+font-weight: 700;
+height: 48px;
+margin-top: 8px;
+justify-content: center;
+position: absolute;
+width: 239px;
+
+&:after {
+    content: "";
+    position: absolute;
+    top: -6.9px;
+    left: 12px;
+    border-style: solid;
+    border-width: 0 4px 6.9px 4px;
+    border-color: transparent transparent rgba(255, 255, 255, 0.4); transparent;
+
+}
+
+
+`
 
