@@ -31,6 +31,12 @@ margin-top: 40px;
 margin-left: 115px;
 margin-right: 120px;
 
+@media screen and (max-width: 671px){
+  width: 288px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
 `
 export const TextContainer = styled.div`
 display: flex;
@@ -118,6 +124,10 @@ margin-left: 115px;
 margin-right: 120px;
 margin-top: 16px;
 margin-bottom: 88px;
+
+@media screen and (max-width:847px){
+  display: none;
+}
 `
 export const PaginationContainer = styled.div`
 display: flex;
@@ -128,6 +138,25 @@ justify-content: flex-end;
 }
 
 `
+
+export const ResponsivePagination = styled(Pagination)`
+align-items: center;
+box-sizing: border-box;
+display: none;
+justify-content: center;
+margin: 0 auto;
+margin-left: 115px;
+margin-right: 120px;
+margin-top: 16px;
+margin-bottom: 88px;
+
+@media screen and (max-width:847px){
+  display: flex;
+}
+
+`
+
+
 
 export const TextPagination = styled.p`
 color: #333;

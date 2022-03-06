@@ -14,6 +14,9 @@ transition: all 0.6s;
 &:hover{
   transform: scale(1.01);
 }
+@media only screen and (max-width: 672px){
+  width: 288px;
+}
 `
 export const BookBlockContainer = styled.div`
   display: flex;
