@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+
 export const ContainerModal = styled.div`
 height: 609px;
 width: 769px;
@@ -18,4 +19,144 @@ width: 100%;
 height: 100%;
 top: 0px;
 left: 0px;
-` 
+`
+export const X = styled.div`
+background-color: #fff;
+cursor: pointer;
+position: absolute;
+right: 20px;
+top: 20px;
+align-items: center;
+border-radius: 50%;
+border: 1px solid rgba(51, 51, 51, 0.2);
+box-sizing: border-box;
+cursor: pointer;
+display: flex;
+height: 32px;
+justify-content: center;
+transform: matrix(-1, 0, 0, 1, 0, 0);
+width: 32px;
+`
+
+
+export const ImageModal = styled.img`
+filter: drop-shadow(0px 12px 18px rgba(0, 0, 0, 0.3));
+margin-left: 48px;
+margin-top: 48px;
+`
+
+export const ContainerInternalModal = styled.div`
+display: flex;
+`
+export const ContainerText = styled.div`
+margin-top: 48px;
+margin-left: 48px;
+/* margin-right: 48px; */
+margin-bottom: 32px;
+cursor: default;
+`
+export const InformationsContainer = styled.div`
+align-items: flex-end;
+display: flex;
+justify-content: space-between;
+`
+export const Informations = styled.div`
+align-items: flex-start;
+display: flex;
+flex-direction: column;
+line-height: 20px;
+font-weight: 500;
+margin-top: 32px;
+
+font-size: 12px;
+width:175px;
+span{
+  line-height: 28px;
+  text-transform: uppercase;
+}
+`
+export const Information = styled.div`
+margin-top: 8px;
+margin-right: 48px;
+`
+export const DataContainer = styled.div`
+display: flex;
+flex-direction: column;
+`
+export const Data = styled.div`
+color: #999;
+font-size: 12px;
+line-height: 20px;
+margin-bottom:4.5px;
+/* white-space: nowrap; 
+width: 180px; 
+overflow: hidden;
+text-overflow: ellipsis;  */
+
+&:last-child{
+  margin-bottom: 0;
+}
+
+`
+export const Title = styled.h1`
+display: block;
+font-family: Heebo;
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 40px;
+color: #333333;
+`
+export const Author = styled.span`
+font-family: Heebo;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 20px;
+color: #AB2680;
+`
+export const ContainerReview = styled.div`
+width: 276px;
+height: 170px;
+margin-top: 24px;
+
+`
+export const TitleReview = styled.div`
+font-family: Heebo;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 20px;
+text-transform: uppercase;
+color: #333333;
+margin-bottom: 10px;
+`
+export const Description = styled.div`
+box-sizing: border-box;
+color: #999;
+font-size: 12px;
+overflow-y: auto;
+height: 140px;
+scrollbar-width: auto;
+scrollbar-color: #ab268a #ffffff;
+text-align: justify;
+img{
+  padding-top: 1px;
+}
+
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {
+    width: 16px;
+    margin-left: 400px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ab268a;
+    border-radius: 28px;
+    border: 3px solid #ffffff;
+  }
+`

@@ -16,7 +16,7 @@ export default function Book({book}) {
 
   return (
     <>
-          {toggleModal && <Modal close={close}/>}
+          {toggleModal && <Modal book={book} close={close}/>}
           <BookBlock onClick={()=>{open()}}>
 
             <BookBlockContainer>
