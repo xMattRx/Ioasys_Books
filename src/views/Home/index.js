@@ -22,7 +22,6 @@ export default function Home() {
   const catchBooks = async (number = currentPage) =>{
     try{
     let books = await getBooks(number);
-    console.log(books)
     setBooks(books)
     }catch(err){ 
       console.log(err)

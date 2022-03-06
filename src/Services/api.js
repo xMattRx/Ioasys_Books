@@ -17,7 +17,6 @@ export const AccessingHome = async (email, password) =>{
 
 export const Token = async (authorization) => {
   try{
-    // console.log("authorization: " + authorization)
     const token = await api.post('/auth/refresh-token', {"refreshToken": authorization});
     return token.status
 

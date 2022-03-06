@@ -11,11 +11,12 @@ margin-left: auto;
 margin-right: auto;
 left: 0;
 right: 0;
-overflow-y: scroll;
+
  top: 4%;
 /*left: 21%; */
 
 @media screen and (max-width:911px){
+  overflow-y: scroll;
   top:8%;
   width: 288px;
   height: 88%;

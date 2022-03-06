@@ -10,8 +10,6 @@ export function VerificationLogged({children}) {
   if(isAuth){
     return children
   } else{
-    console.log("isAuthNão: " + isAuth)
-    console.log("Não")
     return <Navigate to="/"/>
   }
  

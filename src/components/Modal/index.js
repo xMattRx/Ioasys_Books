@@ -4,10 +4,9 @@ import { Author, Background, ContainerInternalModal, ContainerModal, ContainerRe
 
 
 export default function Modal({book,close} ) {
-  console.log(close)
   return (
-    <Background onClick={close}>
-      <X onClick={close.close}>X</X>
+    <Background>
+      <X onClick={close}>X</X>
       <ContainerModal>
         <ContainerInternalModal>
           <div>

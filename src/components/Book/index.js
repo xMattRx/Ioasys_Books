@@ -6,7 +6,6 @@ export default function Book({book}) {
   const [toggleModal, setModal] = useState(false);
 
   const open = () => {
-    console.log("entrou")
     setModal(true);
   }
 
