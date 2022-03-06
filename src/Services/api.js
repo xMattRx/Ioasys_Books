@@ -4,7 +4,6 @@ const api = axios.create({
   baseURL: "https://books.ioasys.com.br/api/v1",
 });
 
-
 export const AccessingHome = async (email, password) =>{
   try{
   const result = await api.post('/auth/sign-in',{email: email, password: password})
@@ -26,7 +25,6 @@ export const Token = async (authorization) => {
 }
 
 export const getBooks = async(id) => {
-  
   let authorization = sessionStorage.getItem('authorization');
   api.defaults.headers.common[`Authorization`] = authorization
   ? `Bearer ${authorization}` : "";
@@ -34,7 +32,6 @@ export const getBooks = async(id) => {
   let data = await api.get(`https://books.ioasys.com.br/api/v1/books?page=${id}&amount=12`)
   let vector = data.data.data
   return vector
-  
 }
 
 
