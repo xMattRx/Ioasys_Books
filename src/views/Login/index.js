@@ -27,7 +27,7 @@ export default function Login() {
     sessionStorage.setItem('informations',informations);
     sessionStorage.setItem('refreshToken',refresh);
     sessionStorage.setItem('authorization',authorization);
-    navigate('/Home/1');
+    navigate('/Home');
   }
  }
 

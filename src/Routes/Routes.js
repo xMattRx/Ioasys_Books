@@ -13,7 +13,7 @@ export default function Routes() {
           <VerificationLogged>
             <Home/>
           </VerificationLogged>
-        } path="/Home/:id" />
+        } path="/Home" />
       </Switch>
     </Router>
   )

@@ -62,7 +62,7 @@ span{
   font-weight: 500;
 }
 `
-export const Arrow = styled.img`
+export const ArrowIcon = styled.img`
 height: 8px;
 width: 10.5px;
 transform: rotate(180deg);
@@ -82,4 +82,39 @@ margin-left: 115px;
 margin-right: 114px;
 width:1130px;
 
+`
+export const Pagination = styled.div`
+align-items: center;
+box-sizing: border-box;
+display: flex;
+justify-content: flex-end;
+margin: 0 auto;
+margin-left: 115px;
+margin-right: 120px;
+margin-top: 12px;
+margin-bottom: 88px;
+width: 1130px;
+`
+export const TextPagination = styled.p`
+color: #333;
+cursor: default;
+font-size: 12px;
+margin-right: 16px;
+
+span{
+  font-weight: 500;
+}
+`
+
+export const Arrows = styled.div`
+display: flex;
+`
+export const Arrow = styled(IconContainer)`
+  margin-right: 8px;
+  cursor: ${props => (props.pages == 1 && props.side == "left") || (props.pages == 42 && props.side == "right") ? "default" : "pointer"};
+`
+export const LeftArrowPage = styled.img`
+`
+export const RightArrowPage = styled.img`
+transform: rotate(180deg);
 `
