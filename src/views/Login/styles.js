@@ -84,6 +84,14 @@ position: relative;
 width: 368px;
 z-index: 0;
 
+&:-webkit-autofill,
+&:-webkit-autofill:hover,
+&:-webkit-autofill:focus,
+&:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+
 @media screen and (max-width: 390px){
   height: 60px;
   width: 288px;
