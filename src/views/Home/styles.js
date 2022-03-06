@@ -150,8 +150,12 @@ margin-right: 120px;
 margin-top: 16px;
 margin-bottom: 88px;
 
+
 @media screen and (max-width:847px){
   display: flex;
+  margin-bottom: 20px;
+  width: 180px;
+  justify-content: space-between;
 }
 
 `

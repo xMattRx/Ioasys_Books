@@ -20,9 +20,14 @@ export default function Home() {
   let navigate = useNavigate();
 
   const catchBooks = async (number = currentPage) =>{
+    try{
     let books = await getBooks(number);
     console.log(books)
     setBooks(books)
+    }catch(err){ 
+      console.log(err)
+      navigate('/');
+    }
   }
   const increase = () => {
     if(currentPage < 42){
