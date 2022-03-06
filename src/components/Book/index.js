@@ -27,18 +27,12 @@ export default function Book({book}) {
                 </BookTitle>
 
               <BookAuthorContainer>
-                {/* {authors.map((element,index)=>{
-                  return <BookAuthor key={index}>
-                    {element},
-                  </BookAuthor>
-                })} */}
                   <BookAuthor>
                     {book.authors[0]}
                   </BookAuthor>
                   <BookAuthor>
                     {book.authors[1]}
                   </BookAuthor>
-               
               </BookAuthorContainer>
 
               <InformationContainer>
