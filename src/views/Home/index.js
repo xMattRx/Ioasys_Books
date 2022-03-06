@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ArrowImg from '../../assets/images/In/Arrow.svg';
@@ -20,6 +21,7 @@ export default function Home() {
 
   const catchBooks = async (number = currentPage) =>{
     let books = await getBooks(number);
+    console.log(books)
     setBooks(books)
   }
   const increase = () => {
@@ -68,11 +70,11 @@ export default function Home() {
 
      <main>
       <BodyContainer>
+      
       {books.length > 0 && books.map((book,index) => {
-          return <Book key={index} id={book.id} image={book.imageUrl} title={book.title} authors={book.authors} pages={book.pageCount}
-          publishing={book.publisher} year={book.published}
-          />
+          return <Book key={index} book={book} />
       })}
+
       </BodyContainer>
      </main>
      <Pagination>

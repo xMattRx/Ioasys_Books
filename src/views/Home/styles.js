@@ -105,7 +105,6 @@ span{
   font-weight: 500;
 }
 `
-
 export const Arrows = styled.div`
 display: flex;
 `
@@ -118,3 +117,5 @@ export const LeftArrowPage = styled.img`
 export const RightArrowPage = styled.img`
 transform: rotate(180deg);
 `
+
+

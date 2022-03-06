@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from '../Modal/index.js';
 import { BookAuthor, BookAuthorContainer, BookBlock, BookBlockContainer, BookBlockImg, BookBlockTextContainer, BookTitle, Information, InformationContainer } from './styles.js';
 
-export default function Book({image,title,authors,pages,publishing,year}) {
+export default function Book({book}) {
+  const [toggleModal, setModal] = useState(false);
+
+  const open = () => {
+    console.log("entrou")
+    setModal(true);
+  }
+
+  const close = () =>{
+    setModal(false);
+  }
+
   return (
     <>
-          <BookBlock>
+          {toggleModal && <Modal close={close}/>}
+          <BookBlock onClick={()=>{open()}}>
+
             <BookBlockContainer>
-              <BookBlockImg src={image} alt={title}/>
+              <BookBlockImg src={book.imageUrl} alt={book.title}/>
               <BookBlockTextContainer>
                 
                 <BookTitle>
-                  {title}
+                  {book.title}
                 </BookTitle>
 
               <BookAuthorContainer>
@@ -20,26 +34,25 @@ export default function Book({image,title,authors,pages,publishing,year}) {
                   </BookAuthor>
                 })} */}
                   <BookAuthor>
-                    {authors[0]}
+                    {book.authors[0]}
                   </BookAuthor>
                   <BookAuthor>
-                    {authors[1]}
+                    {book.authors[1]}
                   </BookAuthor>
                
               </BookAuthorContainer>
 
-
-                <InformationContainer>
+              <InformationContainer>
                   <Information>
-                  {pages} páginas
+                  {book.pageCount} páginas
                   </Information>
                   <Information>
-                  Editora {publishing}
+                  Editora {book.publisher}
                   </Information>
                   <Information>
-                  Publicado em {year}
+                  Publicado em {book.published}
                   </Information>
-                </InformationContainer>
+              </InformationContainer>
 
               </BookBlockTextContainer>
             </BookBlockContainer>
