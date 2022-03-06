@@ -11,7 +11,7 @@ export default function Routes() {
         <Route element={<Login/>} path="/" />
         <Route element={
           <VerificationLogged>
-            <Home/>
+             <Home/>
           </VerificationLogged>
         } path="/Home" />
       </Switch>

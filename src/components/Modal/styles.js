@@ -13,7 +13,7 @@ left: 21%;
 export const Background = styled.div`
 background: rgba(0, 0, 0, 0.4);
 backdrop-filter: blur(2px);
-position: absolute;
+position: fixed;
 z-index: 98;
 width: 100%;
 height: 100%;

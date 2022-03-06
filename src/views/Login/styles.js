@@ -15,6 +15,9 @@ body{
   background-position: center 0;
   background-size: cover;
   background-attachment: fixed;
+  @media screen and (max-width: 968px){
+    background-position: 36% 0%;
+  }
 }
 `
 export const Container = styled.main`
@@ -23,15 +26,28 @@ flex-direction: column;
 justify-content: center;
 height: 100vh;
 padding-left: 115px;
+
+@media screen and (max-width: 968px){
+  padding-left: 0px;
+  align-items: center;
+}
+
 h1{
   cursor: default;
 }
 `
 export const ContainerTitle = styled.div`
 align-items: center;
+justify-content: flex-start;
 display: flex;
 flex-direction: row;
 margin-bottom: 48px;
+width: 368px;
+
+@media screen and (max-width: 390px){
+  width: 288px;
+}
+
 `
 export const Logo = styled.img`
 width: 104.4px;
@@ -68,6 +84,10 @@ position: relative;
 width: 368px;
 z-index: 0;
 
+@media screen and (max-width: 390px){
+  height: 60px;
+  width: 288px;
+}
 
 
 
@@ -87,6 +107,11 @@ outline: none;
 left: 270px;
 top: 11px;
 position: absolute;
+
+@media screen and (max-width: 390px){
+  left: 190px;
+}
+
 `
 export const PopUp = styled.div`
 align-items: center;

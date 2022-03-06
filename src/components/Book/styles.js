@@ -8,6 +8,7 @@ border-radius: 4px;
 cursor: pointer;
 display: flex;
 height: 160px;
+margin-top: 16px;
 width: 272px;
 transition: all 0.6s;
 &:hover{

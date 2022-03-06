@@ -8,10 +8,18 @@ export const Background = createGlobalStyle`
   font-family: 'Heebo', sans-serif;
 }
 body{
-  background: url(${img2}), url(${img4});
+  background: url(${img2}), url(${img4}) no-repeat;
   background-blend-mode: darken;
   transform: matrix(1, 0, 0, -1, 0, 0), transform: rotate(-180deg);
 }
+`
+export const Container = styled.div`
+display: flex;
+flex-direction: column;
+@media screen and (max-width: 842px){
+  align-items: center;
+}
+
 `
 export const HeaderContainer = styled.div`
 align-items: center;
@@ -22,7 +30,7 @@ margin: 0 auto;
 margin-top: 40px;
 margin-left: 115px;
 margin-right: 120px;
-width: 1130px;
+
 `
 export const TextContainer = styled.div`
 display: flex;
@@ -58,6 +66,10 @@ font-weight: 400;
 line-height: 16px;
 margin-right: 16px;
 
+@media screen and (max-width:670px){
+  display: none;
+}
+
 span{
   font-weight: 500;
 }
@@ -73,15 +85,28 @@ width: 5.5px;
 transform: rotate(180deg);
 `
 export const BodyContainer = styled.div`
-display: flex;
-flex-wrap: wrap;
-height: 512px;
-justify-content: space-between;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+/* display: flex;
+flex-wrap: wrap; */
+justify-content: space-around;
 margin-top: 40px;
 margin-left: 115px;
 margin-right: 114px;
-width:1130px;
 
+@media screen and (max-width: 1344px){
+  grid-template-columns: 1fr 1fr 1fr ;
+  margin-left: 170px;
+}
+@media screen and (max-width: 1114px){
+  grid-template-columns: 1fr 1fr;
+  margin-left: 170px;
+}
+@media screen and (max-width: 842px){
+  grid-template-columns: 1fr;
+  margin-left: 0px;
+  margin-right: 0px;
+}
 `
 export const Pagination = styled.div`
 align-items: center;
@@ -91,10 +116,19 @@ justify-content: flex-end;
 margin: 0 auto;
 margin-left: 115px;
 margin-right: 120px;
-margin-top: 12px;
+margin-top: 16px;
 margin-bottom: 88px;
-width: 1130px;
 `
+export const PaginationContainer = styled.div`
+display: flex;
+justify-content: flex-end;
+
+@media screen and (max-width: 1114px){
+  justify-content: center;
+}
+
+`
+
 export const TextPagination = styled.p`
 color: #333;
 cursor: default;

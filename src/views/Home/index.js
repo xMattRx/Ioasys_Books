@@ -9,7 +9,7 @@ import ShapeImg from '../../assets/images/In/Shape.svg';
 import Book from '../../components/Book';
 import { getName } from '../../functions/getName';
 import { getBooks } from '../../Services/api';
-import { Arrow, ArrowIcon, Arrows, Background, BodyContainer, HeaderContainer, IconContainer, LeftArrowPage, Pagination, RightArrowPage, Shape, SignOut, TextContainer, TextIconContainer, TextPagination, Title } from './styles';
+import { Arrow, ArrowIcon, Arrows, Background, BodyContainer, Container, HeaderContainer, IconContainer, LeftArrowPage, Pagination, PaginationContainer, RightArrowPage, Shape, SignOut, TextContainer, TextIconContainer, TextPagination, Title } from './styles';
 
 export default function Home() {
   
@@ -68,37 +68,47 @@ export default function Home() {
        </HeaderContainer>
      </header>
 
+    
      <main>
+    <Container>
       <BodyContainer>
       
       {books.length > 0 && books.map((book,index) => {
           return <Book key={index} book={book} />
       })}
 
+    
+
       </BodyContainer>
+  
+      <PaginationContainer>
+      <Pagination>
+        {currentPage > 0 &&
+          <TextPagination>Página <span>{currentPage}</span> de<span> 42</span></TextPagination>
+        }
+        <Arrows>
+
+          <Arrow onClick={()=>{decrease()}}  pages={currentPage} side="left">
+            {currentPage > 1 ?
+              <LeftArrowPage src={ArrowLeft}/> :
+              <RightArrowPage src={ArrowRight}/>
+            }
+          </Arrow>
+
+          <Arrow onClick={()=>{increase()}} pages={currentPage} side="right">
+          {currentPage < 42 ?
+              <RightArrowPage src={ArrowLeft}/> :
+              <LeftArrowPage src={ArrowRight}/>
+            }
+          </Arrow>
+
+        </Arrows>
+      </Pagination>
+     </PaginationContainer>
+    
+    </Container>
      </main>
-     <Pagination>
-       {currentPage > 0 &&
-        <TextPagination>Página <span>{currentPage}</span> de<span> 42</span></TextPagination>
-       }
-       <Arrows>
 
-         <Arrow onClick={()=>{decrease()}}  pages={currentPage} side="left">
-          {currentPage > 1 ?
-            <LeftArrowPage src={ArrowLeft}/> :
-            <RightArrowPage src={ArrowRight}/>
-          }
-         </Arrow>
-
-         <Arrow onClick={()=>{increase()}} pages={currentPage} side="right">
-         {currentPage < 42 ?
-            <RightArrowPage src={ArrowLeft}/> :
-            <LeftArrowPage src={ArrowRight}/>
-          }
-         </Arrow>
-
-       </Arrows>
-     </Pagination> 
    
 
     </>

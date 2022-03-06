@@ -1,12 +1,18 @@
-
+import React from 'react';
 import { Navigate } from 'react-router-dom';
 
-const isAuth = sessionStorage.getItem('refreshToken');
+
+
 // var url_atual = window.location.href.split("/")[3];
 
 export function VerificationLogged({children}) {
-  if(!isAuth){
+  const isAuth = sessionStorage.getItem('refreshToken');
+  if(isAuth){
+    return children
+  } else{
+    console.log("isAuthNão: " + isAuth)
+    console.log("Não")
     return <Navigate to="/"/>
-  } 
-  return children
+  }
+ 
 }
