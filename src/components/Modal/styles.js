@@ -3,11 +3,23 @@ import styled from "styled-components/macro";
 export const ContainerModal = styled.div`
 height: 609px;
 width: 769px;
+border-radius: 4px;
 position: absolute;
 background-color: #FFFFFF;
 z-index: 99;
-top: 4%;
-left: 21%;
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+overflow-y: scroll;
+ top: 4%;
+/*left: 21%; */
+
+@media screen and (max-width:911px){
+  top:8%;
+  width: 288px;
+  height: 88%;
+}
 
 `
 export const Background = styled.div`
@@ -19,11 +31,12 @@ width: 100%;
 height: 100%;
 top: 0px;
 left: 0px;
+
 `
 export const X = styled.div`
 background-color: #fff;
 cursor: pointer;
-position: absolute;
+position: fixed;
 right: 20px;
 top: 20px;
 align-items: center;
@@ -36,6 +49,17 @@ height: 32px;
 justify-content: center;
 transform: matrix(-1, 0, 0, 1, 0, 0);
 width: 32px;
+
+@media screen and (max-width:911px){
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 250px;
+  right: 0;
+ top: 1.5%;
+}
+
+
 `
 
 
@@ -43,10 +67,27 @@ export const ImageModal = styled.img`
 filter: drop-shadow(0px 12px 18px rgba(0, 0, 0, 0.3));
 margin-left: 48px;
 margin-top: 48px;
+
+@media screen and (max-width:911px){
+  width:240px;
+  margin-left: 34px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+
 `
 
 export const ContainerInternalModal = styled.div`
 display: flex;
+
+@media screen and (max-width:911px){
+  overflow-y: scroll ;
+  flex-direction: column;
+  height:100%;
+}
+
+
 `
 export const ContainerText = styled.div`
 margin-top: 48px;
@@ -54,6 +95,13 @@ margin-left: 48px;
 /* margin-right: 48px; */
 margin-bottom: 32px;
 cursor: default;
+@media screen and (max-width:911px){
+margin-top:0px;
+margin-top: 32px;
+margin-left: 24px;
+}
+
+
 `
 export const InformationsContainer = styled.div`
 align-items: flex-end;

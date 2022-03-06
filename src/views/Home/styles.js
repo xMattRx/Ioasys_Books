@@ -160,8 +160,6 @@ margin-bottom: 88px;
 
 `
 
-
-
 export const TextPagination = styled.p`
 color: #333;
 cursor: default;
