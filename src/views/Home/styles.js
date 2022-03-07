@@ -154,7 +154,7 @@ margin-bottom: 88px;
 @media screen and (max-width:847px){
   display: flex;
   margin-bottom: 20px;
-  width: 180px;
+  width: 190px;
   justify-content: space-between;
 }
 
