@@ -41,14 +41,13 @@ export default function Login() {
          <Logo src={LogoImg} alt="Logo"/>
          <h1>Books</h1>
       </ContainerTitle>
-
       <ContainerInput>
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email">Email - desafio@ioasys.com.br</Label>
         <Input id="email" onChange={(e) => setEmail(e.target.value)}value={email} type="email"/>
       </ContainerInput>
       
       <ContainerInput>
-        <Label htmlFor="password">Senha</Label>
+        <Label htmlFor="password">Senha - 12341234</Label>
         <Input id="password" onChange={(e) => setPassword(e.target.value)} value={password} type="password"/>
         <Button onClick={Submit}>Entrar</Button>
         {error && <PopUp>Email e/ou senha incorretos.</PopUp>}
